@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .carousel img {
+            border-radius: 10px;
+        }
+        .product-details h2 {
+            font-weight: bold;
+        }
+        .product-details p {
+            font-size: 1.2rem;
+        }
+        .product-details ul {
+            padding-left: 1.5rem;
+        }
+        .accordion-button {
+            font-weight: bold;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+        }
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">BrandName</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Product Image Carousel -->
+        <div class="col-md-6">
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://via.placeholder.com/500x300" class="d-block w-100" alt="Product Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/500x300" class="d-block w-100" alt="Product Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://via.placeholder.com/500x300" class="d-block w-100" alt="Product Image 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="col-md-6 product-details">
+            <h2>Product Name</h2>
+            <p class="text-muted">Amazing Product Tagline</p>
+            <h4 class="text-primary">$199.99</h4>
+            <ul>
+                <li>Key Feature 1</li>
+                <li>Key Feature 2</li>
+                <li>Key Feature 3</li>
+                <li>Key Feature 4</li>
+            </ul>
+            <button class="btn btn-primary mt-3">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Accordion for Description and Specifications -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="accordion" id="productAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingDescription">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescription" aria-expanded="true" aria-controls="collapseDescription">
+                            Product Description
+                        </button>
+                    </h2>
+                    <div id="collapseDescription" class="accordion-collapse collapse show" aria-labelledby="headingDescription" data-bs-parent="#productAccordion">
+                        <div class="accordion-body">
+                            This is an amazing product that offers exceptional quality and value. Perfect for a wide range of uses and built to last.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSpecs">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpecs" aria-expanded="false" aria-controls="collapseSpecs">
+                            Technical Specifications
+                        </button>
+                    </h2>
+                    <div id="collapseSpecs" class="accordion-collapse collapse" aria-labelledby="headingSpecs" data-bs-parent="#productAccordion">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Specification 1: Details</li>
+                                <li>Specification 2: Details</li>
+                                <li>Specification 3: Details</li>
+                                <li>Specification 4: Details</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start mt-5">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Follow us on:</p>
+                <div class="social-icons">
+                    <a href="#" class="text-primary"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-info"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-danger"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        &copy; 2025 BrandName. All Rights Reserved.
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+</body>
+</html>
