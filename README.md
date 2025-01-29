@@ -59,5 +59,5 @@ This project is open-source and available under the MIT License.
 ## Contact
 For any queries or suggestions, please contact:
 - **Email**: 2020tanvir1971@gmail.com.com
-- **GitHub**: [tranvir-yzu](https://github.com/tanvir-yzu)
+- **GitHub**: [tanvir-yzu](https://github.com/tanvir-yzu)
 
